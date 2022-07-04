@@ -1,0 +1,14 @@
+@mixin section($indent) {
+  padding-top: $indent;
+  padding-bottom: $indent;
+}
+
+@mixin fonts($fs, $lh, $fw: false, $ls: 0.03em) {
+  @if $fw {
+    font-weight: $fw;
+  }
+
+  font-size: $fs;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+}
