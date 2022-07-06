@@ -5,10 +5,35 @@
 
 @mixin fonts($fs, $lh, $fw: false, $ls: 0.03em) {
   @if $fw {
-    font-weight: $fw;
-  }
-
+  font-weight: $fw;
   font-size: $fs;
   line-height: $lh / $fs;
   letter-spacing: $ls;
+  }  
 }
+// уточнить нужен ли и как назвать?-------------------------
+
+@mixin mobilemin  {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content; 
+  }
+}
+
