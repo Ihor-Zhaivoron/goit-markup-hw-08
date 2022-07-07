@@ -394,7 +394,7 @@ button:focus {
 .work {
   padding-top: 47px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .work {
     display: none;
   }
@@ -404,9 +404,11 @@ button:focus {
   display: flex;
   margin-top: 50px;
 }
-
-.work-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .work-list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .work-item {
@@ -487,6 +489,16 @@ button:focus {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+@media screen and (min-width: 320px) {
+  .client {
+    padding: 60px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding: 94px 0;
+  }
+}
 
 .client__list {
   display: flex;
@@ -494,9 +506,11 @@ button:focus {
   align-items: center;
   margin-top: 50px;
 }
-
-.client__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 320px) {
+  .client__list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .client__link {
@@ -515,6 +529,16 @@ button:focus {
 .client__link:hover, .client__link:focus {
   color: #2196F3;
   border: 1px solid #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__link {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .client__icon {

@@ -1,17 +1,24 @@
 .work {
   @extend %section;
   padding-top: 47px;
-  @media screen and (max-width: 767px) {
+
+  // неправильно работает при данных размерах. 
+  // а при 1200 смещается на 1199ти рх
+  @media screen and (max-width: 1199px) {
     display: none;
   }
 }
 .work-list {
   display: flex;
   margin-top: 50px;
+  @media screen and (min-width: 1200px){
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-.work-item:not(:last-child) {
-  margin-right: 30px;
-}
+// .work-item:not(:last-child) {
+//   margin-right: 30px;
+// }
 .work-item {
   position: relative;
 }
