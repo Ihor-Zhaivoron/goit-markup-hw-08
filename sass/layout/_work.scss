@@ -4,7 +4,7 @@
 
   // неправильно работает при данных размерах. 
   // а при 1200 смещается на 1199ти рх
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199.5px) {
     display: none;
   }
 }

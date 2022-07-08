@@ -30,7 +30,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
 
-  @include fonts(14px, 16px);
+  @include fonts(14px, 16px, 700);
 
   text-transform: uppercase;
   color: var(--primary-title-color);

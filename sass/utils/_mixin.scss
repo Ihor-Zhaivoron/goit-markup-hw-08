@@ -3,13 +3,11 @@
   padding-bottom: $indent;
 }
 
-@mixin fonts($fs, $lh, $fw: null, $ls: 0.03em) {
-  @if $fw {
+@mixin fonts($fs, $lh, $fw , $ls: 0.03em) {
   font-weight: $fw;
   font-size: $fs;
   line-height: $lh / $fs;
   letter-spacing: $ls;
-  }  
 }
 // уточнить нужен ли и как назвать?-------------------------
 
