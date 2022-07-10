@@ -9,22 +9,15 @@
       padding: 94px 0;
     }
 }
-
 .client__list {
     display: flex;
     justify-content: center;
     align-items:center;
     margin-top: 50px;
     flex-wrap: wrap;
-    gap: 30px;
-
-
-    
+    gap: 30px;    
   }
-  // .client__item:not(:last-child) {
-  //   margin-right: 30px;
-  //   }
-  .client__item {
+   .client__item {
     @media screen and (min-width: 480px){
       width: calc((100% - 60px) / 2); 
    }
@@ -35,8 +28,7 @@
   }
   @media screen and (min-width: 1200px) {
     width: calc((100% - 90px) / 6); 
-    margin-right: 30px;     
-  }   
+    }   
   }
   .client__link {  
     display: flex;

@@ -1,11 +1,31 @@
+.portfolio {
+  @extend %section;
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    padding: 60px 0;
+  }
+
+}
+
 .btn-list {
     display: flex;
+    margin-bottom: 40px;
+    gap: 8px;
+    flex-wrap: wrap;
+    @media screen and (min-width: 320px) {
+    }
+    @media screen and (min-width: 768px) {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
     margin-bottom: 50px;
   }
-  .btn-item:not(:last-child) {
-    margin-right: 8px;
-  }
+}
+  
+  // .btn-item:not(:last-child) {
+  //   margin-right: 8px;
+  // }
   .portfolio-button {
     padding: 6px 22px;
     font-weight: 500;
@@ -36,13 +56,29 @@
     background-color: #2196f3;
   }
   .portfolio-list {
-    margin: -15px;
+    // margin: -15px;
+    // display: flex;
+    // flex-wrap: wrap;
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    @media screen and (min-width: 768px)  and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    }
   }
   .portfolio-item {
-    margin: 15px;
-    flex-basis: calc(100% / 3 - 30px);
+    // margin: 15px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 2)
+    }
+  
+      @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px) / 3)
+ 
+    // flex-basis: calc(100% / 3 - 30px);
+      }
   }
   .portfolio-link {
     display: block;
@@ -66,7 +102,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    padding: 63px 24px;
+    padding: 77px 24px;
   
     width: 370px;
     height: 294px;
@@ -84,6 +120,9 @@
     .portfolio-link:hover &,
     .portfolio-link:focus & {
     transform: translatey(0);  
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 77px 24px;
     }
   }
   .portfolio-discription {
