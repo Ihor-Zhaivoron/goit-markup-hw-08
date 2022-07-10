@@ -269,14 +269,21 @@ button:focus {
   color: var(--hover-focus-color);
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  margin-left: 93px;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 83px;
+    gap: 50px;
+  }
 }
-
-.header-item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+    gap: 50px;
+  }
 }
 
 .header-link {
@@ -306,15 +313,33 @@ button:focus {
   border-radius: 2px;
 }
 
-.contacts {
-  margin-left: auto;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin-left: auto;
+  }
+  .contacts .header-mail {
+    display: flex;
+    align-items: center;
+    padding: 21px 0 5px;
+  }
+  .contacts .header-tel {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 21px;
+  }
 }
-.contacts .header-mail,
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+  }
+  .contacts .header-mail,
 .contacts .header-tel {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    margin-right: 30px;
+  }
 }
 
 .header-mail,
@@ -571,7 +596,7 @@ button:focus {
 }
 @media screen and (min-width: 1200px) {
   .client__item {
-    width: calc((100% - 90px) / 6);
+    width: calc((100% - 150px) / 6);
   }
 }
 
