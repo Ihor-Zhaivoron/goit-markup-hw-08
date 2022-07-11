@@ -35,8 +35,9 @@
   }
 }
 .site-nav {
-  @media screen and (min-width: 480px) {
+  display: none;
 
+  @media screen and (min-width: 480px) {
   }
   @media screen and (min-width: 768px) {
   display: flex;
@@ -84,10 +85,14 @@
   } 
 }
 .contacts {
+  display: none;
+
   @media screen and (min-width: 480px) {
 
   }
   @media screen and (min-width: 768px) {
+    display: block;
+
   margin-left: auto;
   .header-mail {
     display: flex;
