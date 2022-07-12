@@ -1,5 +1,6 @@
 .header-socials {
     display: flex;
+
     margin-top: 64px;
     margin-bottom: 48px;
 }
@@ -31,16 +32,4 @@
     @media screen and (min-width: 1200px) {
         display: none;
     }
-}
-.header__icon__close {
-    display: none;
-}
-.header__icon__menu {
-    display: block;
-}
-.is-open .header__icon__close {
-    display: block;
-} 
-.is-open .header__icon__menu {
-    display: none;
 }

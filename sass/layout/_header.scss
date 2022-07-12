@@ -1,26 +1,33 @@
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  min-height: 80px;
+  @media screen and (max-width: 768px) {
+    height: 60px;
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #ececec;
+    background-color: #FFFFFF;
+  
+  }
+  @media screen and (min-width: 768px) {
+  // position: fixed;
+    height: 80px;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid #ececec;
-  background-color: #FFFFFF;
 
-  z-index: 1;
+  // z-index: 1;
+  }
 }
 .header-container {
+  
+  @media screen and (min-width: 768px) {
+
   display: flex;
   align-items: center;
-}
-.header-nav {
-  display: flex;
-  align-items: center;
+  }
 }
 .logo-dark {
   padding: 24px 0px 25px;
@@ -34,8 +41,47 @@
   color: var(--hover-focus-color);
   }
 }
-.site-nav {
+.header-button {
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+}
+.header__icon-close {
   display: none;
+
+}
+.header__icon-menu {
+  display: block;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+.is-open .header__icon-close {
+  display: block;
+} 
+.is-open .header__icon-menu {
+  display: none;
+}
+.mob-menu {
+  @media screen and (max-width: 767.5px) {
+    display: flex;
+
+  position: fixed;
+  z-index: 2;
+  background-color: #FFFFFF;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0 48px 40px;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
 
   @media screen and (min-width: 480px) {
   }
@@ -53,10 +99,7 @@
 
   }
 }
-// .header-item:not(:last-child) {
-//   margin-right: 50px;
-// }
-.header-link {
+.nav-link {
   padding: 32px 0;
   color: #212121;
 
@@ -84,15 +127,17 @@
     border-radius: 2px;
   } 
 }
+.mob-wrap {
+
+}
 .contacts {
-  display: none;
+  display: block;
 
   @media screen and (min-width: 480px) {
 
   }
   @media screen and (min-width: 768px) {
     display: block;
-
   margin-left: auto;
   .header-mail {
     display: flex;
@@ -108,8 +153,8 @@
 @media screen and (min-width: 1200px) {
   display: flex;
   margin-left: auto;
-  .header-mail,
-  .header-tel {
+  .contacts-mail,
+  .contacts-tel {
     display: flex;
     align-items: center;
     padding: 32px 0;
@@ -117,8 +162,8 @@
     }
   }
 }
-.header-mail,
-.header-tel {
+.contacts-mail,
+.contacts-tel {
   color: #757575;
 
   transition-property: color;

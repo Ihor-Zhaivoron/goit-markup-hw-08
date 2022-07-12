@@ -21,63 +21,71 @@
     <!-- Header section -->
     <header class="header">
       <div class="container header-container">
-        <nav class="header-nav">
-          <a class="logo link" lang="en" href="./index.html"
-            >Web<span class="logo-dark">Studio</span>
-          </a>
-          <button type="button" class="header__button" aria-expanded="false" aria-label="Активатор мобильного меню" data-menu-button="">
-            <svg width="40" height="40">
-              <use class="header__icon__close" href="./images/icons.svg#icon-close"></use>
-              <use class="header__icon__menu" href="./images/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
-          <ul class="site-nav list">
-            <li class="header-item">
-              <a class="active-current header-link link" href="./index.html">Студия</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts list">
-          <li class="header-item">
-            <a class="header-mail link" href="malito:info@devstudio.com">
-              <svg class="icon-mail" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-item">
-            <a class="header-tel link" href="tel:+380961111111">
-              <svg class="icon-smartphone" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
-        <ul class="header-socials list">
-          <li class="header-socials__item">
-            <a class="header-socials__link link" href="#">Instagram</a>
-          </li>
-          <li class="header-socials__item">
-            <div class="header-socials__border"></div>
-            <a class="header-socials__link link" href="#">Twitter</a>
-          </li>
-          <li class="header-socials__item">
-            <div class="header-socials__border"></div>
-            <a class="header-socials__link link" href="#">Facebook</a>
-          </li>
-          <li class="header-socials__item">
-            <div class="header-socials__border"></div>
-            <a class="header-socials__link link" href="#">LinkedIn</a>
-          </li>
-        </ul>
+        <a class="logo link" lang="en" href="./index.html"
+          >Web<span class="logo-dark">Studio</span>
+        </a>
+        <button
+          type="button"
+          class="header-button"
+          aria-expanded="false"
+          aria-label="Активатор мобильного меню"
+          data-menu-button=""
+        >
+          <svg width="40" height="40">
+            <use class="header__icon-close" href="./images/icons.svg#icon-close"></use>
+            <use class="header__icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="mob-menu">
+          <div class="container">
+            <nav class="nav">
+              <ul class="nav-list list">
+                <li class="nav-item">
+                  <a class="active-current nav-link link" href="./index.html">Студия</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link" href="">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="mob-wrap">
+              <div class="contacts">
+                <a class="contacts-mail link" href="malito:info@devstudio.com">
+                  <svg class="icon-mail" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+                <a class="contacts-tel link" href="tel:+380961111111">
+                  <svg class="icon-smartphone" width="10px" height="16px">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </div>
+              <ul class="header-socials list">
+                <li class="header-socials__item">
+                  <a class="header-socials__link link" href="#">Instagram</a>
+                </li>
+                <li class="header-socials__item">
+                  <div class="header-socials__border"></div>
+                  <a class="header-socials__link link" href="#">Twitter</a>
+                </li>
+                <li class="header-socials__item">
+                  <div class="header-socials__border"></div>
+                  <a class="header-socials__link link" href="#">Facebook</a>
+                </li>
+                <li class="header-socials__item">
+                  <div class="header-socials__border"></div>
+                  <a class="header-socials__link link" href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Main section -->
@@ -90,7 +98,7 @@
         </div>
       </section>
       <!-- Особенности -->
-      <section class="skills">
+      <!-- <section class="skills">
         <div class="container">
           <ul class="skills-list list">
             <li class="skills-item">
@@ -139,9 +147,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Чем мы занимаемся -->
-      <section class="work">
+      <!-- <section class="work">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work-list list">
@@ -169,9 +177,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Наша команда -->
-      <section class="team">
+      <!-- <section class="team">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list list">
@@ -340,9 +348,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Постоянные клиенты -->
-      <section class="client">
+      <!-- <section class="client">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="client__list list">
@@ -390,7 +398,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Footer section -->
     <!-- <footer class="footer">
