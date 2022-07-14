@@ -229,8 +229,9 @@
     margin-right: 10px;
     fill: currentColor;
   @media screenn and (min-width: 768px) {
-    display: block;
+    display: block; 
     display: none;
     margin-right: 10px;
   }
 }
+// не србатывает display: block; 
