@@ -77,13 +77,12 @@
     text-decoration: none;
     color: #ffffff;
   }
-
   .connect {
-    margin-left: 0;
+    margin-top: 60px;
     @media screen and (min-width: 768px) {
-    margin-left: 70px;
+    margin: 0 0 0 70px;
   }
-}
+  }
   .connect__title {
     font-family: 'Roboto';
     font-weight: 700;

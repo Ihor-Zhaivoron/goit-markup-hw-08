@@ -6,8 +6,7 @@
     top: 0;
     left: 0;
     border-bottom: 1px solid #ececec;
-    background-color: #FFFFFF;
-  
+    background-color: #FFFFFF;    
   }
   @media screen and (min-width: 768px) {
   // position: fixed;
@@ -22,12 +21,10 @@
   }
 }
 .header-container {
-  
   @media screen and (min-width: 768px) {
-
   display: flex;
   align-items: center;
-  }
+  } 
 }
 .logo-dark {
   padding: 24px 0px 25px;
@@ -76,8 +73,15 @@
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+  
   }
 }
+// ----------------------------не работает автоотступ
 .nav {
   display: flex;
   align-items: center;
