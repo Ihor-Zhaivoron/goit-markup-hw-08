@@ -45,6 +45,7 @@
   background-color: #ffffff;
   color: #000;
   border: none;
+  // z-index: 2;
 }
 .header__icon-close {
   display: none;
@@ -63,6 +64,7 @@
   display: none;
 }
 .mob-menu {
+  
   @media screen and (max-width: 767.5px) {
     display: flex;
 
@@ -80,11 +82,12 @@
   display: flex;
   align-items: center;
 }
+.nav-item:not(:last-child)  {
+  
+  margin-bottom: 32px;
+}
 .nav-list {
-  display: flex;
-
-  @media screen and (min-width: 480px) {
-  }
+  
   @media screen and (min-width: 768px) {
   display: flex;
   align-items: center;
@@ -100,6 +103,15 @@
   }
 }
 .nav-link {
+  @media screen and (max-width: 767.5px) {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47/40);
+  letter-spacing: 0.02em;
+  
+  color: #212121;
+  }
+
   padding: 32px 0;
   color: #212121;
 
@@ -112,7 +124,8 @@
   }
 }
 .active-current {
-  position: relative;
+  @media screen and (min-width: 768px) {
+    position: relative;
   color: #2196f3;
   &::after {
     position: absolute;
@@ -126,15 +139,18 @@
     background-color:  #2196F3;
     border-radius: 2px;
   } 
+  }
+  
 }
 .mob-wrap {
 
 }
 .contacts {
-  display: block;
+  display: flex;
+  flex-direction: column-reverse;
 
-  @media screen and (min-width: 480px) {
-
+  @media screen and (max-width: 767.5px) {
+    margin-top: 32px;
   }
   @media screen and (min-width: 768px) {
     display: block;
@@ -152,9 +168,10 @@
 }
 @media screen and (min-width: 1200px) {
   display: flex;
+  flex-direction: unset;
   margin-left: auto;
-  .contacts-mail,
-  .contacts-tel {
+  .contacts__mail,
+  .contacts__tel {
     display: flex;
     align-items: center;
     padding: 32px 0;
@@ -162,8 +179,14 @@
     }
   }
 }
-.contacts-mail,
-.contacts-tel {
+// .contacts__list  {
+
+// }
+.contacts__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
   color: #757575;
 
   transition-property: color;
@@ -173,9 +196,33 @@
   &:focus {
   color: var(--hover-focus-color);
   }
+  @media screen and (max-width: 767.5px) {
+      display: flex;
+      margin-top: 32px;
+  }
 }
+.contacts__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  color: #2196F3;
+  
+  @media screenn and (min-width: 768px) {
+    color: #757575;
+  }
+    &:hover,
+    &:focus {
+    color: var(--hover-focus-color);
+    }
+  }
+
+
 .icon-mail,
 .icon-smartphone {
   margin-right: 10px;
-  fill: currentColor;
+    fill: currentColor;
+  @media screenn and (min-width: 768px) {
+  }
 }
