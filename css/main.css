@@ -286,7 +286,7 @@ button:focus {
   .section__title {
     font-weight: 700;
     font-size: 28px;
-    line-height: 1.1785714286;
+    line-height: 33px;
     letter-spacing: 0.03em;
   }
 }
@@ -294,7 +294,7 @@ button:focus {
   .section__title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.1666666667;
+    line-height: 42px;
     letter-spacing: 0.03em;
   }
 }
@@ -308,6 +308,13 @@ button:focus {
     left: 0;
     border-bottom: 1px solid #ececec;
     background-color: #FFFFFF;
+  }
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -508,7 +515,7 @@ button:focus {
   letter-spacing: 0.02em;
   color: #2196F3;
 }
-@media screenn and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .contacts__tel {
     color: #757575;
   }
@@ -523,7 +530,7 @@ button:focus {
   margin-right: 10px;
   fill: currentColor;
 }
-@media screenn and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .icon-mail,
 .icon-smartphone {
     display: block;
@@ -580,7 +587,7 @@ button:focus {
     height: 600px;
     margin: 0px auto;
     background-color: #c4c4c4;
-    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero.jpg");
+    background-image: linear-gradient(45deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/origin/hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -674,7 +681,7 @@ button:focus {
   letter-spacing: 0.03em;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.1428571429;
+  line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-title-color);
@@ -753,6 +760,7 @@ button:focus {
 @media screen and (min-width: 320px) {
   .team__list {
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 30px;
   }
 }
@@ -1098,7 +1106,12 @@ button:focus {
 }
 
 .connect {
-  margin-left: 70px;
+  margin: 60px 0 0 0;
+}
+@media screen and (min-width: 768px) {
+  .connect {
+    margin: 0 0 0 70px;
+  }
 }
 
 .connect__title {
@@ -1278,15 +1291,15 @@ button:focus {
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.17;
   color: #757575;
 }
-@media screenn and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .checkbox-label {
-    font-size: 12px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 

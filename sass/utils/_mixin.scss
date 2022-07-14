@@ -6,7 +6,7 @@
 @mixin fonts($fs, $lh, $fw , $ls: 0.03em) {
   font-weight: $fw;
   font-size: $fs;
-  line-height: $lh / $fs;
+  line-height: $lh;
   letter-spacing: $ls;
 }
 

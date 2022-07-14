@@ -6,7 +6,14 @@
     top: 0;
     left: 0;
     border-bottom: 1px solid #ececec;
-    background-color: #FFFFFF;    
+    background-color: #FFFFFF; 
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      overflow: auto;
+      }     
   }
   @media screen and (min-width: 768px) {
   // position: fixed;
@@ -73,15 +80,9 @@
   width: 100vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    }
   
   }
 }
-// ----------------------------не работает автоотступ
 .nav {
   display: flex;
   align-items: center;
@@ -146,9 +147,9 @@
   }
   
 }
-.mob-wrap {
+// .mob-wrap {
 
-}
+// }
 .contacts {
   display: flex;
   flex-direction: column-reverse;
@@ -213,7 +214,7 @@
 
   color: #2196F3;
   
-  @media screenn and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     color: #757575;
   }
     &:hover,
@@ -228,7 +229,7 @@
     display: none;
     margin-right: 10px;
     fill: currentColor;
-  @media screenn and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: block; 
     display: none;
     margin-right: 10px;
