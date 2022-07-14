@@ -221,8 +221,12 @@
 
 .icon-mail,
 .icon-smartphone {
-  margin-right: 10px;
+    display: none;
+    margin-right: 10px;
     fill: currentColor;
   @media screenn and (min-width: 768px) {
+    display: block;
+    display: none;
+    margin-right: 10px;
   }
 }
