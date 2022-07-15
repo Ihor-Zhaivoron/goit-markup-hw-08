@@ -1,7 +1,8 @@
 .subscription-form {
-    margin-left: auto;
-    @media screen and (min-width: 320px) and (max-width: 1199px) {
-    // margin: 60px 0 0;
+    margin-top: 60px;
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+      margin-top: 0;
     }
   }
   .subscription-title {
@@ -11,26 +12,28 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-  
-    color: #FFFFFF;
-    @media screen and (min-width: 320px) and (max-width: 1199px) {
     text-align: center;
+    color: #FFFFFF;
+    @media screen and (min-width: 1200px) {
+    text-align: unset;
     }
   }
   .subscription-mail-form {
     display: flex;
-    @media screen and (min-width: 320px) and (max-width: 1199px) {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (min-width: 1200px) {
+      flex-direction: unset;
+      justify-content: unset;
+      align-items: unset;
     }
   }
-  .subscription-input {
-    margin-right: 12px;
+  .subscription-input {    
+    margin:0 0 20px;
+    max-width: 450px;
+    width: 100%;
     padding: 15px 16px;
-    max-width: 358px;
-    // width: 100%;
     height: 50px;
     font-size: 16px;
     line-height: 1.25;
@@ -42,13 +45,12 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-
-    @media screen and (min-width: 320px) and (max-width: 1199px) {
-      margin:0 0 20px;
-      max-width: 450px;
-      width: 100%;
+    @media screen and (min-width: 1200px) {
+    margin: 0 12px 0 0;
+    width: 358px;
+    max-width: disabled;
   }
-  }
+}
   .subscription-mail-form input::placeholder {
     padding-top: 15px 0;
   }
