@@ -1,5 +1,5 @@
 .header {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.5px) {
     height: 60px;
     display: flex;
     width: 100%;
@@ -67,7 +67,7 @@
 .is-open .header__icon-menu {
   display: none;
 }
-.mob-menu {
+.mob-menu.is-hidden {
   
   @media screen and (max-width: 767.5px) {
     display: flex;
