@@ -481,6 +481,12 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .mob-wrap {
+    margin-left: auto;
+  }
+}
+
 .contacts {
   margin-left: auto;
   display: flex;
