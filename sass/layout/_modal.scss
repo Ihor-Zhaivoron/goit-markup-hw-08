@@ -9,6 +9,8 @@
   
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    
     &.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -63,12 +65,13 @@
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;  
-    &:hover {
-    background-color:  var(--hover-focus-color);
-    }
+    
   }  
   .close-icon {
-    color: #000000;
+    fill: currentColor;
+    &:hover {
+     color:  var(--hover-focus-color);
+     }
   }
   .form-title {   
     margin-bottom: 12px;

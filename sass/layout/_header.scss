@@ -1,37 +1,24 @@
 .header {
-  @media screen and (max-width: 767.5px) {
-    height: 60px;
-    display: flex;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-bottom: 1px solid #ececec;
-    background-color: #FFFFFF; 
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      overflow: auto;
-      }     
-  }
-  @media screen and (min-width: 768px) {
-  // position: fixed;
-    height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 80px;
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
 
-  // z-index: 1;
+  @media screen and (min-width: 1200px) {
+    position: fixed;
+    z-index: 1;
   }
 }
 .header-container {
-  @media screen and (min-width: 768px) {
   display: flex;
   align-items: center;
-  } 
 }
 .logo-dark {
   padding: 24px 0px 25px;
@@ -41,19 +28,29 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
-  &:focus{
-  color: var(--hover-focus-color);
+  &:focus {
+    color: var(--hover-focus-color);
   }
 }
 .header-button {
+  position: relative;
   background-color: #ffffff;
   color: #000;
   border: none;
-  // z-index: 2;
+  z-index: 10;
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+  display: none;
+  }  
+}
+// .header-button .header-button__icon, .header-button .header-button__icon {
+//   fill: currentColor;
+// }
+.header-button:hover .header-button__icon, .header-button:focus .header-button__icon {
+  fill: var(--hover-focus-color);
 }
 .header__icon-close {
   display: none;
-
 }
 .header__icon-menu {
   display: block;
@@ -63,61 +60,66 @@
 }
 .is-open .header__icon-close {
   display: block;
-} 
+  
+}
 .is-open .header__icon-menu {
   display: none;
 }
-.mob-menu.is-hidden {
-  
+.mob-menu {
   @media screen and (max-width: 767.5px) {
-    display: flex;
-
-  position: fixed;
-  z-index: 2;
-  background-color: #FFFFFF;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 0 48px 40px;
-  
+    position: fixed;
+    z-index: 2;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    transform: translateX(0);
+    transition: 400ms;
   }
+  &.is-open {
+    transform: translateX(100%);
+    
+  }
+}
+.mob-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  height: 100%;
 }
 .nav {
   display: flex;
   align-items: center;
 }
-.nav-item:not(:last-child)  {
-  
-  margin-bottom: 32px;
-}
 .nav-list {
-  
   @media screen and (min-width: 768px) {
-  display: flex;
-  align-items: center;
-  margin-left: 83px;
-  gap: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 83px;
+    gap: 50px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
     margin-left: 93px;
     gap: 50px;
-
+  }
+}
+.nav-item:not(:last-child) {
+  @media screen and (max-width: 767.5px) {
+    margin-bottom: 32px;
   }
 }
 .nav-link {
-  @media screen and (max-width: 767.5px) {
   font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47/40);
-  letter-spacing: 0.02em;
-  
-  color: #212121;
-  }
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
 
-  padding: 32px 0;
+    color: #212121;
   color: #212121;
 
   transition-property: color;
@@ -125,68 +127,65 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-  color: var(--hover-focus-color);
+    color: var(--hover-focus-color);
+  }
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
   }
 }
 .active-current {
-  @media screen and (min-width: 768px) {
-    position: relative;
+  color: var(--hover-focus-color);
+@media screen and (min-width: 768px) {
+  position: relative;
   color: #2196f3;
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     bottom: -1px;
     left: 0;
     display: block;
-    width:100%;
+    width: 100%;
     height: 4px;
-  
-    background-color:  #2196F3;
+
+    background-color: #2196f3;
     border-radius: 2px;
-  } 
   }
-  
 }
-// .mob-wrap {
-
-// }
+}
 .contacts {
-  display: flex;
-  flex-direction: column-reverse;
-
-  @media screen and (max-width: 767.5px) {
-    margin-top: 32px;
-  }
-  @media screen and (min-width: 768px) {
-    display: block;
   margin-left: auto;
-  .header-mail {
-    display: flex;
-    align-items: center;
-    padding: 21px 0 5px;
-    }
-    .header-tel {
-      display: flex;
-      align-items: center;
-      padding: 5px 0 21px;
-      }  
-}
-@media screen and (min-width: 1200px) {
   display: flex;
-  flex-direction: unset;
-  margin-left: auto;
+flex-direction: column-reverse;
   .contacts__mail,
   .contacts__tel {
     display: flex;
     align-items: center;
-    padding: 32px 0;
-    margin-right: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    .contacts__mail {
+      display: flex;
+      align-items: center;
+      padding: 21px 0 10px;
+    }
+    .contacts__tel {
+      display: flex;
+      align-items: center;
+      padding: 0 0 21px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: unset;
+    margin-left: auto;
+    display: flex;
+    .contacts__mail,
+    .contacts__tel {
+      display: flex;
+      align-items: center;
+      padding: 32px 0;
     }
   }
 }
-// .contacts__list  {
-
-// }
 .contacts__mail {
   font-weight: 500;
   font-size: 24px;
@@ -199,11 +198,11 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-  color: var(--hover-focus-color);
+    color: var(--hover-focus-color);
   }
   @media screen and (max-width: 767.5px) {
-      display: flex;
-      margin-top: 32px;
+    display: flex;
+    margin-top: 32px;
   }
 }
 .contacts__tel {
@@ -212,27 +211,107 @@
   line-height: 1.18;
   letter-spacing: 0.02em;
 
-  color: #2196F3;
-  
+  color: #2196f3;
+
   @media screen and (min-width: 768px) {
     color: #757575;
   }
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     color: var(--hover-focus-color);
-    }
   }
-
-
+}
 .icon-mail,
 .icon-smartphone {
-    display: none;
-    margin-right: 10px;
-    fill: currentColor;
+  display: none;
+  margin-right: 10px;
+  fill: currentColor;
   @media screen and (min-width: 768px) {
-    display: block; 
-    display: none;
+    display: block;
     margin-right: 10px;
   }
 }
-// не србатывает display: block; 
+// portf-----------------
+.site-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+  gap: 50px;
+}
+.header-link {
+  padding: 32px 0;
+  color: #212121;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--hover-focus-color);
+  }
+}
+// .active-current {
+//   @media screen and (min-width: 1200px) {
+//     position: relative;
+//     color: #2196f3;
+//     &::after {
+//       position: absolute;
+//       content: '';
+//       bottom: -1px;
+//       left: 0;
+//       display: block;
+//       width: 100%;
+//       height: 4px;
+
+//       background-color: #2196f3;
+//       border-radius: 2px;
+//     }
+//   }
+// }
+
+
+// первая версия----------------------------------------
+// .header {
+//   border-bottom: 1px solid #ececec;
+//   @media screen and (max-width: 767.5px) {
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     position: fixed;
+//     height: 80px;
+
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.02em;
+
+//     z-index: 1;
+//   }
+// }
+
+// .header-container {
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     align-items: center;
+//   }
+// }
+// .logo-dark {
+//   padding: 24px 0px 25px;
+//   color: #000000;
+
+//   transition-property: color;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   &:hover,
+//   &:focus {
+//     color: var(--hover-focus-color);
+//   }
+// }
+
+
+
+
+// .mob-wrap {
+// }
+
+
