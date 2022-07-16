@@ -100,23 +100,20 @@
     position: relative;
     overflow: hidden;
   }
-  .portfolio-text {
-    transform: translatey(100%);
+  
+  .portfolio-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    overflow-y: scroll;
+    
+    transform: translatey(101%);
     position: absolute;
-    left: 0;
-    top: 0;
-    padding: 77px 24px;
-  
-    width: 370px;
-    height: 294px;
-  
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-  
-    color: #FFFFFF;
+    top: 0;   
     background-color:  rgba(33, 150, 243, 0.9);
-  
+
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -124,10 +121,27 @@
     .portfolio-link:focus & {
     transform: translatey(0);  
     }
-    @media screen and (min-width: 1200px) {
-      padding: 77px 24px;
-    }
+  @media screen and (min-width: 480px) {
+      align-items: center;
+      padding: 0 24px;
   }
+  @media screen and (min-width: 768px) {
+    overflow-y: hidden;
+    padding: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
+}
+.portfolio-text {
+    width: calc(100% - 48px);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+  
+    color: #FFFFFF;   
+  }
+
   .portfolio-discription {
     flex-grow: 1;
     padding: 20px 24px;
