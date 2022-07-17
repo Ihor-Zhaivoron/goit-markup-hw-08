@@ -376,6 +376,9 @@ img {
   display: none;
 }
 
+.mob-menu {
+  width: 100%;
+}
 @media screen and (max-width: 767.5px) {
   .mob-menu {
     position: fixed;
@@ -933,6 +936,12 @@ img {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .section.portfolio {
+    padding-top: 174px;
+  }
+}
+
 .btn-list {
   display: flex;
   margin-bottom: 40px;
@@ -995,12 +1004,12 @@ img {
 
 @media screen and (min-width: 768px) {
   .portfolio-item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-item {
-    width: calc((100% - 90px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 
